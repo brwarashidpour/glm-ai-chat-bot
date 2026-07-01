@@ -6,10 +6,11 @@ class Config:
     BOT_TOKEN = os.environ["BOT_TOKEN"]
     TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
-    # --- GLM-5.2 (Z.ai) ---
-    GLM_API_KEY = os.environ["GLM_API_KEY"]
-    GLM_BASE_URL = "https://api.z.ai/api/paas/v4"
-    GLM_MODEL = "glm-5.2"
+        # --- Gemini (Google AI Studio) ---
+    GLM_API_KEY = os.environ["GLM_API_KEY"].strip()
+    GLM_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+    GLM_MODEL = "gemini-2.5-flash"
+
 
     # --- GitHub Gist (حافظه‌ی مکالمات بین ری‌استارت‌ها) ---
     GIST_TOKEN = os.environ["GIST_TOKEN"]
